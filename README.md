@@ -8,7 +8,7 @@ theme: material
 
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://fluidb.icu"><img src="/img/logo.png" alt="flunix"></a>
+  <a href="https://fluidb.icu"><img src="/img/logo.jpg" alt="flunix"></a>
 </p>
 
 
