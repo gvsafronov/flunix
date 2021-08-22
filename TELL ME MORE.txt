@@ -1,0 +1,12 @@
+
+1. /algernon/engine/repl.go- In this file shows lua-prompt and colors in terminal
+2. /algernon/.algernon- In this file shows prompt on a web-page when http-server is lanched
+3. /algernon/main.go- In this file shows descriptions in terminal
+4. /algernon/samples/lua/index.lua- lua script, launced in http-server. Result we see in browser
+5. /algernon/platformdep/logo_unix.go- Logo in terminal
+6. /algernon/engine/config.go- basic number port 3000 to access web page
+7. /algernon/engine/serverconf.go-basic name of backend database
+8. /algernon/engine/flags.go- show flags
+9. /algernon/engine/serverconf.go-  name temp file
+10. /algernon/engine/dirhandler.go- dirconfFilename = ".algernon"
+11. /algernon/themes/styling.go- Определяет цвет фона в браузере при запуске сервера

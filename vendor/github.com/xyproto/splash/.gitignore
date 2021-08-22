@@ -1,0 +1,10 @@
+*.swp
+*.bak
+*~
+
+simple/simple
+output*.html
+
+docs/docs
+cmd/gendoc/gendoc
+cmd/simple/simple
