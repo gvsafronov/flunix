@@ -118,10 +118,12 @@ Features and limitations
   ```sh
  $ sudo tar -C /opt -xzf go1.15.2.linux-amd64.tar.gz
   ```
+<br>
 
 ```sh
-export PATH=$PATH:/opt/go/bin
+$ export PATH=$PATH:/opt/go/bin
 ```
+<br>
 
 ```sh
 $ go version
