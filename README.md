@@ -182,79 +182,8 @@ Test
 
 See the [open issues](https://github.com/gvsafronov/fluidb/issues) for a list of proposed features (and known issues).
 
-
-## Troubles
-
-### Troubles
-  
- This section lists common the most popular troubles which are encountered during working
-
-1. After starting the application you see the follow worrying-looking warning:
-  
- #### Trouble №1 
-  
-  ```
- WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-  ```
- #### Solution
-  
-  ```
-  Add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-  ```
-  
- ### Trouble №2
-
-After starting the application you see the follow worrying-looking warning:
-  
-```
-WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
-  ```
-  
-  #### Solution
-  
-  Install hugepages
-  ```
-  sudo apt install hugepages
-  ``` 
-
-## Security
-
-#### TLS Support
-
-### Building
-
-To build with TLS support you'll need OpenSSL development libraries (e.g.
-libssl-dev on Debian/Ubuntu).
-
-Run `make BUILD_TLS=yes`.
-
-### Tests
-
-To run fluidb test suite with TLS, you'll need TLS support for TCL (i.e.
-`tcl-tls` package on Debian/Ubuntu).
-
-1. Run `./utils/gen-test-certs.sh` to generate a root CA and a server
-   certificate.
-
-2. Run `./runtest --tls` or `./runtest-cluster --tls` to run fluidb and fluidb
-   Cluster tests in TLS mode.
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
 <!-- LICENSE -->
-## License
+### License
 
 Distributed under the BSD 3 License. See `LICENSE` for more information.
 
