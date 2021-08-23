@@ -111,10 +111,21 @@ Features and limitations
 1. Install golang (version 1.16 or above)
 
   ```sh
- sudo apt install build-essential nasm autotools-dev autoconf libjemalloc-dev tcl tcl-dev uuid-dev libcurl4-openssl-dev -y pkg-config cmake m4 automake peg libtool autoconf
+ $ wget https://dl.google.com/go/go1.17.linux-amd64.tar.gz
   ```
+  <br>
+  
+   ```sh
+ $ sudo tar -C /opt -xzf go1.15.2.linux-amd64.tar.gz
+  ```
+  <br>
+```sh
+export PATH=$PATH:/opt/go/bin
+```
 <br>
-
+```sh
+$ go version
+```
 ### Building
 
 1. Check that your install golang (see Preparations)
@@ -147,58 +158,23 @@ Features and limitations
  5. Wait for the installation process to complete, after installation the application will start automatically
  <br>
   
-### Running fluidB
+### Running flunix
 
 
 To run fluidB with the default configuration just run the fluidb-server:
 
-    $ cd src
-    $ ./fluidB-serv
+    $ cd flunix
+    $ ./flunix
  
-
-If you want to provide your fluidB.conf, you have to run it using an additional
-parameter (the path of the configuration file):
-
-    $ ./fluidB-serv --port 9999 --replicaof 127.0.0.1 9470
-    $ ./fluidB-serv /etc/fluidB/9470.conf --loglevel debug
-
-All the options in fluidB.conf are also supported as options using the command
-line, with exactly the same name.
-
-It is possible to alter the fluidB configuration by passing parameters directly
-as options using the command line. Examples:
-
-    $ ./fluidB-serv --port 9999 --replicaof 127.0.0.1 9470
-    $ ./fluidB-serv /etc/fluidB/9470.conf --loglevel debug
-
-All the options in fluidB.conf are also supported as options using the command
-line, with exactly the same name.
-<br>
 
 ### Start working with fluidB
 
 
-You can use fluidB-cli to play with fluidB. Start a fluidB-server instance,
-then in another terminal try the following:
-
 ```
 
 ---------------------------------------    
- Let's start with key-value model
+Test
 ---------------------------------------
-
-    % cd src
-    % ./clif
-    fluidB:~> ping
-    PONG
-    fluidB:~> set foo bar
-    OK
-    fluidB:~> get foo
-    "bar"
-    fluidB:~> incr mycounter
-    (integer) 1
-    fluidB:~> incr mycounter
-    (integer) 2
     
 
 <!-- ROADMAP -->
@@ -263,38 +239,6 @@ To run fluidb test suite with TLS, you'll need TLS support for TCL (i.e.
 
 2. Run `./runtest --tls` or `./runtest-cluster --tls` to run fluidb and fluidb
    Cluster tests in TLS mode.
-
-### Running manually
-
-To manually run a Redis server with TLS mode (assuming `gen-test-certs.sh` was
-invoked so sample certificates/keys are available):
-
-    ./src/fluidb-server --tls-port 9470 --port 0 \
-        --tls-cert-file ./tests/tls/fluidb.crt \
-        --tls-key-file ./tests/tls/fluidb.key \
-        --tls-ca-cert-file ./tests/tls/ca.crt
-
-To connect to this Redis server with `fluidb-cli`:
-
-    ./src/fluidb-cli --tls \
-        --cert ./tests/tls/fluidb.crt \
-        --key ./tests/tls/fluidb.key \
-        --cacert ./tests/tls/ca.crt
-
-This will disable TCP and enable TLS on port 9470. It's also possible to have
-both TCP and TLS available, but you'll need to assign different ports.
-
-To make a Replica connect to the master using TLS, use `--tls-replication yes`,
-and to make fluidb Cluster use TLS across nodes use `--tls-cluster yes`.
-
-Connections
------------
-
-All socket operations now go through a connection abstraction layer that hides
-I/O and read/write event handling from the caller.
-
-Note that unlike Redis, fluidb fully supports multithreading of TLS connections.
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
