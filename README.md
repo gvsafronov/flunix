@@ -28,7 +28,6 @@
     <li><a href="#gratitudes">Gratitudes</a></li>
     <li><a href="#requirements">Requirements</a></li>
     <li><a href="#cases">Cases</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#troubles">Troubles</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -178,11 +177,7 @@ To run fluidB with the default configuration just run the fluidb-server:
 Test
 ---------------------------------------
     
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/gvsafronov/fluidb/issues) for a list of proposed features (and known issues).
+```
 
 <!-- LICENSE -->
 ### License
