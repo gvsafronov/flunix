@@ -47,11 +47,9 @@ Flunix is an open source (MIT License), in-memory database management system, di
 Web server with built-in support for QUIC, HTTP/2, Lua, Markdown, Pongo2, HyperApp, Amber, Sass(SCSS), GCSS, JSX, BoltDB (built-in, stores the database in a file, like SQLite), Redis, PostgreSQL, MariaDB/MySQL, rate limiting, graceful shutdown, plugins, users and permissions.
 
 
-
 ## Gratitudes
 
 * **Alexander F. Rødseth** I wish to express my appreciation for all your efforts!!!
-<br>
 
 
 <!-- System Requirements -->
