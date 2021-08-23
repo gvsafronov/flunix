@@ -114,15 +114,15 @@ Features and limitations
  $ wget https://dl.google.com/go/go1.17.linux-amd64.tar.gz
   ```
   <br>
-  
-   ```sh
+   
+  ```sh
  $ sudo tar -C /opt -xzf go1.15.2.linux-amd64.tar.gz
   ```
-  <br>
+
 ```sh
 export PATH=$PATH:/opt/go/bin
 ```
-<br>
+
 ```sh
 $ go version
 ```
