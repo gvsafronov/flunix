@@ -115,7 +115,7 @@ Features and limitations
   <br>
    
   ```sh
- $ sudo tar -C /opt -xzf go1.15.2.linux-amd64.tar.gz
+ $ sudo tar -C /opt -xzf go1.17.linux-amd64.tar.gz
   ```
 <br>
 
